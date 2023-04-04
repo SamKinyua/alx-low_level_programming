@@ -1,5 +1,5 @@
-#ifndef MY_LITTLE_GIRL
-#define MY_LITTLE_GIRL
+#ifndef MR_TRILLA
+#define MR_TRILLA
 
 #include <stdio.h>
 #include <string.h>
