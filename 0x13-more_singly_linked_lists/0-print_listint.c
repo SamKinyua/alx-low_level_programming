@@ -5,15 +5,17 @@
  * @h: struct data type pointer
  * Return: str i elements
  */
+
 size_t print_listint(const listint_t *h)
 {
-	unsigned int i = 0;
-	const listint_t *new_node = h;
+	size_t hesabu = 0;
 
-	for (; new_node; new_node = new_node->next)
+	while (h)
 	{
-		printf("%d\n, new_node->n);
-		i++;
+		printf('%d\n", h->n);
+		h = h->next;
+		hesabu++;
 	}
-	return(i);
+
+	return (hesabu);
 }
