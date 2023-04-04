@@ -1,14 +1,13 @@
 #ifndef LISTS_H
 #define LISTS_H
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
 /**
  * struct listint_s - singly linked list
- * @n: an integer
- * @next: points to forward node
+ * @n: integer
+ * @next: points to the next node
  *
  * Decription: singly linked list node structure
  *
