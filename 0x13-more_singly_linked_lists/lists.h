@@ -1,5 +1,5 @@
-#ifndef MR_TRILLA
-#define MR_TRILLA
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stdio.h>
 #include <string.h>
@@ -7,7 +7,7 @@
 
 /**
  * struct listint_s - singly linked list
- * @n: integer
+ * @n: an integer
  * @next: points to forward node
  *
  * Decription: singly linked list node structure
