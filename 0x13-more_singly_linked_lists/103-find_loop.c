@@ -2,8 +2,8 @@
 
 /**
  * find_listint_loop - finds the loop in a linked list
- * @head: listint_t pointer to head
- * Return: loop
+ * @head: listint_t double pointer to head
+ * Return: the loop
  */
 
 listint_t *find_lstint_loop(listint_t *head)
