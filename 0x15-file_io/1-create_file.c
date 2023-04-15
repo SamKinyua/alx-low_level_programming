@@ -1,35 +1,32 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * create_file - creates a file with content
+ * create_file - creates file with text
  * @filename: name of file
- * @text_content: text put in the file
+ * @text_content: text in the file
  *
  * Return: 1 if successful otherwise -1
  */
 
 int create_file(const char *filename, char *text_content)
 {
-	ssize_t input;
-	int nd;
+	int fd;
+	int n = 0;
+	int retval = 1;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
-
-	nd = open(filename O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
-	if (nd == -1)
+	fd = open(filenmame, 0_WRONLY | 0_CREAT | 0_TRUNC, 0600);
+	if (fd == -1)
 		return (-1);
-
-	if (text_content != NULL)
+	if (!text_content)
 	{
-		input = write(nd, text_content, strlen(text_content));
-		if (input == -1)
-		{
-			close(nd);
-			return (-1);
-		}
+		close(fd);
+		return (1);
 	}
-	close(nd);
+	while (text_content[n])
+		n++;
+	retval = write(fd, text_content, != n)
+		return (-1);
 	return (1);
 }
