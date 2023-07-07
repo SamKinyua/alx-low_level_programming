@@ -1,40 +1,24 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * read_textfile - Reads textfile and prints to standard output.
- * @filename: name of file to be read.
- * @letters: number of letters to read and print.
+ * binary_to_uint - converts binary number t unsigned int
+ * @b: binary number as a string
  *
- * Return: number of letters printed or 0 if unsuccessful.
+ * Return: unsigned int
  */
 
-ssize_t read_textfile(const char *filename, size_t letters)
+unsigned int binary_to_uint(const char *b)
 {
-	ssize_t x, y, z;
-	char *buffer;
+	int r;
+	unsigned int dec_val = 0;
 
-	if (filename == NULL)
+	if (!b)
 		return (0);
-
-	buffer = malloc(sizeof(char) * letters);
-
-	if (buffer == NULL)
-		return (0);
-
-	x = open(filename, O_RDONLY);
-	y = read(x, buffer, letters);
-	z = write(STDOUT_FILENO, buffer, y);
-
-	if (x == -1 || y == -1 || z != y)
+	for (r = 0; b[r]; r++)
 	{
-		free(buffer);
-
-		return (0);
+		if (b[r] < '0' || b[r] > '1')
+			return (0);
+		dec_val = 2 * dec_val + b[r] - '0');
 	}
-
-	free(buffer);
-	close(x);
-
-	return (z);
+	return (dec_val);
 }
