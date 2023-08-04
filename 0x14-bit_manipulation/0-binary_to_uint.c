@@ -7,28 +7,28 @@
  * Return: converted binary
  */
 
-unsigned int binary to uint(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int r;
 	int len;
 	int base;
 
-	if(!b)
+	if (!b)
 		return (0);
 
 	r = 0;
 
-	for(len = 0; b[len] != '\0'; len++)
+	for (len = 0; b[len] != '\0'; len++)
 		;
 
-	for(len--, base = 1; len >= 0; len--, base *= 2)
+	for (len--, base = 1; len >= 0; len--, base *= 2)
 	{
-		if(b[len] != '0' && b[len] != '1')
+		if (b[len] != '0' && b[len] != '1')
 		{
 			return (0);
 		}
 
-		if(b[len] & 1)
+		if (b[len] & 1)
 		{
 			r += base;
 		}
