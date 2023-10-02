@@ -2,11 +2,11 @@
 
 
 /**
- * create_file - creates file with text
- * @filename: name of file
- * @text_content: text in the file
+ *create_file - creates file with text
+ *@filename: name of file
+ *@text_content: text in the file
  *
- * Return: 1 if successful otherwise -1
+ *Return: 1 if successful otherwise -1
  */
 
 
