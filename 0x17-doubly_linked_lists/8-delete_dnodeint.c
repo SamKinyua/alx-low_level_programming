@@ -24,7 +24,8 @@ size_t dlistint_len(const dlistint_t *h)
 }
 
 /**
- * delete_dnodeint_at_index - deletes node in a doubly linked list at given index
+ * delete_dnodeint_at_index - deletes node in a doubly linked
+ * list at given index
  * @head: double pointer to list
  * @index: index of node to be deleted
  *
